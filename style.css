@@ -5,8 +5,49 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-size: 62.5%;
 }
 
+#to-do-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+#wrapper {
+    margin: 2em 4em;
+}
+
+#header-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-name-input {
+    padding: 5px 10px;
+    width: 500px;
+    font-size: 1.4rem;
+}
+
+#to-do-list-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-list-header {
+    text-align: center;
+    padding: 5px 100px;
+    font-size: 1.6rem;
+}
+
+
+.task-container {
+    border: 1px solid black;
+}
