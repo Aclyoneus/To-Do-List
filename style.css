@@ -71,3 +71,33 @@ body {
     border: 1px solid black;
 }
 
+.task {
+    margin: 10px 20px;
+    padding: 10px 0;
+    border: 1px solid black;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.task-button {
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.task-icons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    font-size: 1.4rem;
+}
