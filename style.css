@@ -5,13 +5,13 @@
 }
 
 body {
-    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-size: 62.5%;
 }
 
 #to-do-list {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +49,11 @@ body {
     text-align: center;
     margin-left: 10px;
     cursor: pointer;
+    transition: .3s background-color;
+}
+
+#add-task-button:hover {
+    background-color: #04af04;
 }
 
 #to-do-list-container {
@@ -56,22 +61,21 @@ body {
     justify-content: space-around;
 }
 
-.task-list-header {
+.task-list-status-header {
     text-align: center;
     padding: 5px 20px;
     font-size: 1.6rem;
     text-wrap: wrap;
+    background-color: whitesmoke;
+    border-bottom: 1px solid black;
 }
 
 .task-container {
     min-width: 300px;
     max-width: 300px;
     border: 1px solid black;
-}
-
-.task-list {
-    height: 500px;
-    border: 1px solid black;
+    min-height: 600px;
+    box-shadow: 5px 5px 10px grey;
 }
 
 .task {
@@ -103,6 +107,24 @@ body {
 
 .icon {
     font-size: 1.4rem;
+}
+
+.fa-circle-arrow-left, .fa-circle-arrow-right {
+    transition: .3s color, .3s scale;
+}
+
+.fa-circle-arrow-left:hover, .fa-circle-arrow-right:hover {
+    color: dodgerblue;
+    scale: calc(1.2);
+}
+
+.trash-can-button {
+    transition: .3s color, .3s scale;
+}
+
+.trash-can-button:hover {
+    color: #da0000;
+    scale: calc(1.2);
 }
 
 .hidden-button {

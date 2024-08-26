@@ -29,7 +29,7 @@ addTaskButton.addEventListener('click', function() {
         trashCanIcon.classList.add('fa-solid', 'fa-trash-can', 'trash-can-icon', 'icon');
         rightArrowIcon.classList.add('fa-solid', 'fa-circle-arrow-right', 'arrow-right-icon', 'icon');
 
-        trashCanButton.addEventListener('click', function () {
+        trashCanButton.addEventListener('click', function() {
             taskContainer.remove();
         })
 
@@ -54,6 +54,19 @@ addTaskButton.addEventListener('click', function() {
                 doingLeftArrowButton.replaceWith(leftArrowButton);
                 doingRightArrowButton.replaceWith(rightArrowButton);
                 leftArrowButton.classList.add('hidden-button');
+            })
+
+            doingRightArrowButton.addEventListener('click', function() {
+                doneTaskList.append(taskContainer);
+                const doneLeftArrowButton = doingLeftArrowButton.cloneNode(true);
+                leftArrowButton.replaceWith(doneLeftArrowButton);
+                doingRightArrowButton.classList.add('hidden-button');
+
+                doneLeftArrowButton.addEventListener('click', function() {
+                    doingTaskList.append(taskContainer);
+                    doneLeftArrowButton.replaceWith(doingLeftArrowButton);
+                    doingRightArrowButton.classList.remove('hidden-button');
+                })
             })
         })
     }
