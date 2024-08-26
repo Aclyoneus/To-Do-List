@@ -58,11 +58,14 @@ body {
 
 .task-list-header {
     text-align: center;
-    padding: 5px 100px;
+    padding: 5px 20px;
     font-size: 1.6rem;
+    text-wrap: wrap;
 }
 
 .task-container {
+    min-width: 300px;
+    max-width: 300px;
     border: 1px solid black;
 }
 

@@ -1,6 +1,6 @@
-const doneTaskList = document.querySelector('#done-task-list');
-const doingTaskList = document.querySelector('#doing-task-list');
 const toDoTaskList = document.querySelector('#to-do-task-list');
+const doingTaskList = document.querySelector('#doing-task-list');
+const doneTaskList = document.querySelector('#done-task-list');
 const taskNameInput = document.querySelector('#task-name-input');
 const addTaskButton = document.querySelector('#add-task-button');
 
@@ -39,5 +39,23 @@ addTaskButton.addEventListener('click', function() {
         taskIconContainer.append(leftArrowButton, trashCanButton, rightArrowButton);
         taskContainer.append(taskName, taskIconContainer);
         toDoTaskList.append(taskContainer);
+
+        rightArrowButton.addEventListener('click', function() {
+            doingTaskList.append(taskContainer);
+            const doingRightArrowButton = rightArrowButton.cloneNode(true);
+            const doingLeftArrowButton = leftArrowButton.cloneNode(true);
+
+            rightArrowButton.replaceWith(doingRightArrowButton);
+            leftArrowButton.replaceWith(doingLeftArrowButton);
+            doingLeftArrowButton.classList.remove('hidden-button');
+
+            doingLeftArrowButton.addEventListener('click', function() {
+                toDoTaskList.append(taskContainer);
+                doingLeftArrowButton.replaceWith(leftArrowButton);
+                doingRightArrowButton.replaceWith(rightArrowButton);
+                leftArrowButton.classList.add('hidden-button');
+            })
+        })
     }
 });
+
