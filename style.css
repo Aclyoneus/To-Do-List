@@ -101,3 +101,9 @@ body {
 .icon {
     font-size: 1.4rem;
 }
+
+.hidden-icon {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
