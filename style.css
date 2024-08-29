@@ -4,43 +4,48 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-size: 62.5%;
 }
 
-#to-do-list {
-    height: 100vh;
+.to-do-list {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lightgrey;
 }
 
-#wrapper {
+.wrapper {
     margin: 2em 4em;
 }
 
-#header-container {
+.header-container {
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-#header {
+.header {
     width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#task-name-input {
+.task-name-input {
     width: 40%;
     padding: 5px 10px;
     font-size: 1.4rem;
 }
 
-#add-task-button {
+.add-task-button {
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -52,11 +57,11 @@ body {
     transition: .3s background-color;
 }
 
-#add-task-button:hover {
+.add-task-button:hover {
     background-color: #04af04;
 }
 
-#to-do-list-container {
+.to-do-list-container {
     display: flex;
     justify-content: space-around;
 }
