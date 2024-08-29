@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-size: 62.5%;
+}
+
+.to-do-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+.wrapper {
+    margin: 2em 4em;
+}
+
+.header-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.header {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-name-input {
+    width: 40%;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+.add-task-button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s background-color;
+}
+
+.add-task-button:hover {
+    background-color: #04af04;
+}
+
+.to-do-list-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-list-status-header {
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 1.6rem;
+    text-wrap: wrap;
+    background-color: whitesmoke;
+    border-bottom: 1px solid black;
+}
+
+.task-container {
+    min-width: 300px;
+    max-width: 300px;
+    border: 1px solid black;
+    min-height: 600px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.task {
+    margin: 10px 20px;
+    padding: 10px 0;
+    border: 1px solid black;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.task-button {
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.task-icons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    font-size: 1.4rem;
+}
+
+.fa-circle-arrow-left, .fa-circle-arrow-right {
+    transition: .3s color, .3s scale;
+}
+
+.fa-circle-arrow-left:hover, .fa-circle-arrow-right:hover {
+    color: dodgerblue;
+    scale: calc(1.2);
+}
+
+.trash-can-button {
+    transition: .3s color, .3s scale;
+}
+
+.trash-can-button:hover {
+    color: #da0000;
+    scale: calc(1.2);
+}
+
+.hidden-button {
+    visibility: hidden;
+}
