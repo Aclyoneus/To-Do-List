@@ -4,13 +4,7 @@ const doneTaskList = document.querySelector('#done-task-list');
 const taskNameInput = document.querySelector('#task-name-input');
 const addTaskButton = document.querySelector('#add-task-button');
 
-addTaskButton.addEventListener('click', function() {
-    const newTask = taskNameInput.value;
-
-    if (!newTask) {
-        return;
-    }
-
+function createTask(name) {
     const taskContainer = document.createElement('div');
     const taskName = document.createElement('h3');
     const taskIconContainer = document.createElement('div');
@@ -22,7 +16,7 @@ addTaskButton.addEventListener('click', function() {
     const trashCanIcon = document.createElement('i');
 
     taskContainer.classList.add('task');
-    taskName.innerText = taskNameInput.value;
+    taskName.innerText = name;
     taskName.classList.add('task-list-header');
     taskIconContainer.classList.add('task-icons');
     leftArrowButton.classList.add('arrow-left-button', 'task-button', 'hidden-button');
@@ -32,15 +26,27 @@ addTaskButton.addEventListener('click', function() {
     trashCanIcon.classList.add('fa-solid', 'fa-trash-can', 'trash-can-icon', 'icon');
     rightArrowIcon.classList.add('fa-solid', 'fa-circle-arrow-right', 'arrow-right-icon', 'icon');
 
-    trashCanButton.addEventListener('click', function() {
-        taskContainer.remove();
-    })
-
     rightArrowButton.append(rightArrowIcon);
     trashCanButton.append(trashCanIcon);
     leftArrowButton.append(leftArrowIcon);
     taskIconContainer.append(leftArrowButton, trashCanButton, rightArrowButton);
     taskContainer.append(taskName, taskIconContainer);
+
+    trashCanButton.addEventListener('click', function() {
+        taskContainer.remove();
+    })
+
+    return taskContainer;
+}
+
+addTaskButton.addEventListener('click', function() {
+    const newTask = taskNameInput.value;
+
+    if (!newTask) {
+        return;
+    }
+
+    const taskContainer = createTask(newTask);
     toDoTaskList.append(taskContainer);
 
     rightArrowButton.addEventListener('click', function() {
