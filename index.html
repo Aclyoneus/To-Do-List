@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>To-Do List</title>
+    <script src="https://kit.fontawesome.com/9f8eebfb89.js" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <section id="to-do-list" class="to-do-list">
+        <div id="wrapper" class="wrapper">
+            <div id="header-container" class="header-container">
+                <div id="header" class="header">
+                    <input id="task-name-input" class="task-name-input" type="text" placeholder="task name" maxlength="20"/>
+                    <button id="add-task-button" class="add-task-button">+</button>
+                </div>
+            </div>
+            <div id="to-do-list-container" class="to-do-list-container">
+                <div id="to-do-task-container" class="task-container">
+                    <h2 class="task-list-status-header">To do</h2>
+                    <div id="to-do-task-list" class="task-list"></div>
+                </div>
+                <div id="doing-task-container" class="task-container">
+                    <h2 class="task-list-status-header">Doing</h2>
+                    <div id="doing-task-list" class="task-list"></div>
+                </div>
+                <div id="done-task-container" class="task-container">
+                    <h2 class="task-list-status-header">Done</h2>
+                    <div id="done-task-list" class="task-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
